@@ -15,8 +15,9 @@ from docopt import docopt
 
 
 if __name__ == '__main__':
-    arguments = docopt(__doc__, version='rHockey Ticker 0.1')
-    feed = 'new' or arguments['<name>']
-    delay = 5 or arguments['--delay']
-    limit = 5 or arguments['--limit']
+    #import ipdb; ipdb.set_trace()
+    arguments = docopt(__doc__, version=u'rHockey Ticker 0.1')
+    feed = arguments['<name>'] or u'new'
+    delay = int(arguments['--delay']) or 5
+    limit = int(arguments['--limit']) or 5
     ticker.ticker_runner('hockey', feed, delay, limit)
