@@ -30,9 +30,9 @@ def _print_submissions(submissions):
             ups, downs = _calculate_votes(score, ratio)
             index = len(submissions) - index - 1
             print(u"{}. {}".format(index, submission.title))
-            print(u"{}  \u02C4{}  \u02C5{}  ({}%)".format(
+            print(u"    {}  \u02C4{}  \u02C5{}  ({}%)".format(
                                                 score, ups, downs, ratio*100))
-            print(strftime(u'%Y-%m-%d %H:%M:%S', localtime(submission.created)))
+            print(strftime(u'    %Y-%m-%d %H:%M:%S', localtime(submission.created)))
             print(u"---------------------------------\n")
     print(u"---------------------------------\n")
 
