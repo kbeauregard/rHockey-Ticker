@@ -19,4 +19,4 @@ if __name__ == '__main__':
     feed = arguments['<name>'] or u'new'
     delay = int(arguments['--delay'] or 5)
     limit = int(arguments['--limit'] or 5)
-    ticker.ticker_runner('hockey', feed, delay, limit)
+    ticker.ticker_runner('hockey', feed, delay=delay, limit=limit)
